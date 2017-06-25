@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  iptables:
+    build: .
+    image: xieyunzi/iptables:debian-stretch
+    privileged: true
+
+networks:
+  default:
+    external:
+      name: xz-bridge
